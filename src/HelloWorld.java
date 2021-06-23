@@ -13,7 +13,7 @@ public class HelloWorld {
         var myNumber = 3.14;
         System.out.println(myNumber);
 
-        var class = 1;
+
 
         int x = 5;
         System.out.println(x++);
@@ -23,19 +23,19 @@ public class HelloWorld {
         Object o = theNumberThree;
         int three = (int) o;
 
-        int three = (int) "three";
-
-        int x = 4;
-        x += 5;
-
-        int x = 3;
-        int y = 4;
-        y *= x;
-
-        int x = 10;
-        int y = 2;
-        x = x / y;
-        y = y - x;
+//        int three = (int) "three";
+//
+//        int x = 4;
+//        x += 5;
+//
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+//
+//        int x = 10;
+//        int y = 2;
+//        x = x / y;
+//        y = y - x;
 
 
 
