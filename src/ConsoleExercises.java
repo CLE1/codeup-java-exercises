@@ -17,7 +17,22 @@ public class ConsoleExercises {
 //
 //        System.out.println("one + two + three");
 
-        Scanner sc = new Scanner()
+
+
+
+
+        // Casey's code
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("enter values of length and width of a classroom at Codeup");
+//
+//        int length = Integer.parseInt(sc.nextLine());
+//        int width = Integer.parseInt(sc.nextLine());
+//
+//        System.out.printf("Perimeter: $s\n", (2 * length) + (2 * width));
+//        System.out.printf("Area: $s", length * width);
+
+
 
     }
 
