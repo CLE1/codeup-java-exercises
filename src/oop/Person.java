@@ -1,23 +1,25 @@
+package oop;
+
 public class Person {
     private String name;
     public static void main(String[] args) {
 //        The class should have a constructor that accepts a `String` value and sets
 //        the person's name to the passed string.
-//        Create a `main` method on the class that creates a new `Person` object and
+//        Create a `main` method on the class that creates a new `oop.Person` object and
 //        tests the above methods.
-//        Person person = new Person("Amado");
+//        oop.Person person = new oop.Person("Amado");
         Person person = new Person();
         person.setName("Jesse");
         person.sayHello();
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
+//        oop.Person person1 = new oop.Person("John");
+//        oop.Person person2 = new oop.Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
+//        oop.Person person1 = new oop.Person("John");
+//        oop.Person person2 = person1;
 //        System.out.println(person1 == person2);
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
+//        oop.Person person1 = new oop.Person("John");
+//        oop.Person person2 = person1;
 //        System.out.println(person1.getName());
 //        System.out.println(person2.getName());
 //        person2.setName("Jane");
