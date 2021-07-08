@@ -1,9 +1,9 @@
 package shapes;
 
-public class Square extends Rectangle {
-    public Square(int length) {
-        super(length, length);
-
-    }
-
-}
+//public class Square extends Rectangle {
+//    public Square(int length) {
+//        super(length, length);
+//
+//    }
+//
+//}
