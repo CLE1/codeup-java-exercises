@@ -2,14 +2,14 @@ package movies;
 import java.util.Scanner;
 public class Input {
     Scanner scanner = new Scanner(System.in);
-    static int userInput = 0;
-    public static int getUserInput() {
-        return userInput;
-    }
-    public static void setUserInput(int userInput) {
-        Input.userInput = userInput;
-    }
-    public Input() {
+    //    static int userInput = 0;
+//    public static int getUserInput() {
+//        return userInput;
+//    }
+//    public static void setUserInput(int userInput) {
+//        Input.userInput = userInput;
+//    }
+    public int showOptions() {
         {
             System.out.println("What would you like to do?\n" +
                     "\n" +
@@ -18,15 +18,12 @@ public class Input {
                     "2 - view movies in the animated category\n" +
                     "3 - view movies in the drama category\n" +
                     "4 - view movies in the horror category\n" +
-                    "5 - view movies in the scifi category");
-            setUserInput(scanner.nextInt());
-            getMovies(getUserInput());
-        }
-    }
-    private void getMovies(int userInput) {
-        Movie[] movies = MoviesArray.findAll();
-        for (Movie movie : movies) {
-            System.out.println(movie.getName() + " - " + movie.getCatagory());
+                    "5 - view movies in the sci-fi category\n"+
+                    "6 - view movies in the musical category\n"+
+                    "\n" +
+                    "Enter your choice: ");
+            //setUserInput(scanner.nextInt());
+            return scanner.nextInt();
         }
     }
 }
