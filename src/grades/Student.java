@@ -7,22 +7,27 @@ public class Student {
     private String name;
     private ArrayList<Integer> grade;
 
-    public Student(String name, ArrayList<Integer> grade) {
+    public Student(String name) {
         this.name = name;
-        this.grade = grade;
+        this.grade = new ArrayList<>();
     }
 
-    public Student() {
 
-    }
 
     public static void main(String[] args) {
 
-        Student student = new Student();
+        Student student = new Student("Amado");
 
 
+        System.out.println(student.getName());
 
-        System.out.println();
+        student.addGrade(97);
+        student.addGrade(94);
+        student.addGrade(88);
+        System.out.println(student.grade);
+
+        double average = student.getGradeAverage();
+        System.out.println(average);
 
     }
 
@@ -30,12 +35,14 @@ public class Student {
     public String getName(){
         return this.name;
     }
+
     // adds the given grade to the grades property
     public void addGrade(int grade){
 
         this.grade.add(grade);
 
     }
+
     // returns the average of the students grades
     public double getGradeAverage(){
 
