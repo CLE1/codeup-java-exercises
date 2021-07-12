@@ -124,6 +124,44 @@ public class ControlFlowExercises {
 
             int grade = scanner.nextInt();
 
+            if (grade >= 97){
+                System.out.println("your garde is an A+");
+            } else if (grade >= 93){
+                System.out.println("Your grade is an A");
+            } else if (grade >= 90){
+                System.out.println("Your grade is an A-");
+            } else if (grade >= 87){
+                System.out.println("Your grade is a B+");
+            } else if (grade >=83){
+                System.out.println("Your grade is a B");
+            } else if (grade >= 80){
+                System.out.println("Your grade is a B-");
+            } else if (grade >= 77){
+                System.out.println("Your grade is a C+");
+            } else if (grade >= 73){
+                System.out.println("Your grade is a C");
+            } else if (grade >=70){
+                System.out.println("Your grade is a C-");
+            } else if (grade >= 67){
+                System.out.println("Your grade is a D+");
+            } else if (grade >= 63){
+                System.out.println("Your grade is a D");
+            } else if (grade >= 60){
+                System.out.println("Your grade is a D-");
+            } else {
+                System.out.println("Your grade is an F");
+            }
+
+            System.out.println("Would you like to continue?");
+
+            String prompt = scanner.next().toLowerCase();
+
+            if (prompt.equals("yes")){
+                continue;
+            } else {
+                System.out.println("come back and enter your number to get your grade again.");
+            } break;
+
         }
 
 
