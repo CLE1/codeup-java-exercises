@@ -10,8 +10,7 @@ public class Input {
         this.doubleNum = doubleNum;
     }
     public String getString(){
-        String message = "hello";
-        return message;
+        return this.scanner.nextLine();
     }
     public boolean yesNo(){
         System.out.print("Yes or Yes?: ");
