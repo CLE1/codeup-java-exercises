@@ -12,6 +12,8 @@ public class MethodsExercises {
         int y = 2;
         System.out.println(x * y);
 
+        
+
 
 
 

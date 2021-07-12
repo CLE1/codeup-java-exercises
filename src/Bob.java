@@ -2,21 +2,20 @@ import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
-        System.out.println("Talk to bob!");
+        System.out.println("Talk to Bob!");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        String conversation = sc.nextLine();
+        String conversation = scanner.nextLine();
 
-        if (conversation.endsWith("?")) {
-            System.out.println("Sure");
-        } else if (conversation.endsWith("!")) {
-            System.out.println("Whoa, chill out!");
-        } else if (conversation.isEmpty()) {
+        if (conversation.endsWith("?")){
+            System.out.println("Sure");;
+        } else if (conversation.endsWith("!")){
+            System.out.println("Whoa chill out!");
+        } else if (conversation.isEmpty()){
             System.out.println("Fine. Be that way!");
         } else {
             System.out.println("Whatever.");
         }
-
     }
-
+}
