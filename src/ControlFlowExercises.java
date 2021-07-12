@@ -115,6 +115,17 @@ public class ControlFlowExercises {
 //
 //        }
 
+        //------------------------
+
+        while (true){
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("enter number from 1 to 100 to get grade");
+
+            int grade = scanner.nextInt();
+
+        }
+
 
 
 
