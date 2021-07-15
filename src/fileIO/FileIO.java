@@ -1,78 +1,35 @@
 package fileIO;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileIO {
 
     public static void main(String[] args) {
-
-//        System.out.println(getFilePath("src","fileIO", "test.txt").toAbsolutePath());
-
-//        System.out.println("Does the path exist?");
-//        System.out.println(
-//                doesPathExist(
-//                        getFilePath("src", "fileIO", "test.txt")));
-
-        Path path = getPath("src", "fileIO", "files");
-        tryCreateDirectory(path);
-
-        path = Paths.get(path.toAbsolutePath().toString(),"test.txt");
-
-        System.out.println(path.toAbsolutePath());
-
-
+        init();
 
     }
 
-    public static Path getPath(String filename){
-        return Paths.get(filename);
-    }
+        public static void init(){
+            Path path = FileDirectoryUtil.getPath("src", "fileIO", "files");
+            FileDirectoryUtil.tryCreateDirectory(path);
 
-    public static Path getPath(String parentDirectory, String filename){
-        return Paths.get(parentDirectory, filename);
-    }
+            path = Paths.get(path.toAbsolutePath().toString(),"test.txt");
 
-    public static Path getPath(String parentDirectory, String childDirectory, String filename){
-        return Paths.get(parentDirectory, childDirectory, filename);
-    }
-
-    public static boolean doesPathExist(Path path){
-        return Files.exists(path);
-    }
-
-
-    public static void tryCreateDirectory(Path pathToCreate) {
-
-        if (!doesPathExist(pathToCreate)) {
+            System.out.println(path.toAbsolutePath());
 
             try {
-                Files.createDirectory(pathToCreate);
-            } catch (IOException e) {
-                System.out.println("Could not create the directory at: ");
-                System.out.println(pathToCreate.toAbsolutePath());
+                IOUtil.printFileContents(IOUtil.readFromFile(path));
+            } catch (IOException e){
+                System.out.println("Unable to read contents of the file at: " + path.toAbsolutePath());
             }
 
-        } else {
-            System.out.println("The path at: " + pathToCreate.toAbsolutePath() + " already exists");
-        }
-    }
 
-    public static void tryCreateFile(Path path){
-
-        if(!doesPathExist(path)){
-            try{
-                Files.createFile(path);
-            }catch (IOException e){
-                System.out.println("Could not create file at: " + path.toAbsolutePath());
-            }
-        } else {
-            System.out.println("The file at: " + path.toAbsolutePath() + " already exists");
         }
+
 
     }
 
 
-}
+
