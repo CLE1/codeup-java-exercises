@@ -68,7 +68,7 @@ public class GradesApplication {
                 System.out.printf("\n Name: %s - GitHub Username: %s\n", userName.getName(), userInput);
                 System.out.printf("\n Current Average: %s \n", userName.getName(), userInput);
             }
-        } while (input.yesNo());
+        } while (input.yesNo(input.getString()));
 
 
     }
