@@ -66,11 +66,11 @@ public class Input {
         this.doubleNum = doubleNum;
     }
 
-    //------------------------------------------------
+
     public String getString(){
         return this.scanner.nextLine();
     }
-//------------------------------------------------
+
 
     public boolean yesNo(String s){
         System.out.print("Yes or Yes?: ");
@@ -80,7 +80,7 @@ public class Input {
         }
         return false;
     }
-//--------------------------------------------------
+
 
     public int getInt(int min, int max){
         this.number = getInt();
@@ -94,7 +94,7 @@ public class Input {
         return this.number;
     }
 
-    //----------------------------------------------------
+
     public int getInt(){
 
         System.out.print("Please enter a integer: ");
@@ -107,7 +107,7 @@ public class Input {
         return getInt();
     }
 
-//-------------------------------------------------------
+
 
 //    public double getDouble(double min, double max){
 //        this.doubleNum = getDouble();

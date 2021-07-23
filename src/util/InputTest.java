@@ -1,3 +1,4 @@
+
 package util;
 
 public class InputTest {
@@ -6,5 +7,6 @@ public class InputTest {
 //        System.out.println(input.getDouble(3,10));
 //        System.out.println(input.getDouble(3,10));
         System.out.println(input.getDouble());
+        System.out.println(input.getInt());
     }
 }
