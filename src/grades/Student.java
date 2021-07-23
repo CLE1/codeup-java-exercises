@@ -4,28 +4,24 @@ import java.util.ArrayList;
 
 public class Student {
 
-    private String name;
-    private ArrayList<Integer> grades = new ArrayList<>();
-    private ArrayList<Integer> grade = new ArrayList<>();
+    private final String name;
+    private final ArrayList<Integer> grade = new ArrayList<>();
+    private ArrayList<Double> grades;
 
-    public Student(String name, int ...grades) {
+    public Student(String name) {
+        this.name = name;
 
-        setName(name);
-        addGrades(grades);
     }
-
-
 
     public static void main(String[] args) {
 
-        Student student = new Student("Chris");
-
-
+        Student student = new Student("Jesse");
         System.out.println(student.getName());
 
-        student.addGrade(97);
-        student.addGrade(94);
-        student.addGrade(88);
+        student.addGrade(91);
+        student.addGrade(84);
+        student.addGrade(78);
+
         System.out.println(student.grade);
 
         double average = student.getGradeAverage();
@@ -34,52 +30,24 @@ public class Student {
     }
 
     // returns the student's name
-    public String getName(){
-        return this.name;
+    public String getName () {
+        return name;
     }
-
     // adds the given grade to the grades property
-    public void addGrade(int grade){
-
+    public void addGrade (int grade){
         this.grade.add(grade);
-
     }
-
-    public void addGrades(int ...grades){
-        for (int grade: grades){
-            this.addGrade(grade);
-        }
-    }
-
     // returns the average of the students grades
-    public double getGradeAverage(){
+    public double getGradeAverage () {
+        double total = 0;
 
-        double sum = 0;
-
-        for (int i = 0; i < grade.size(); i++) {
-            sum = sum + grade.get(i);
+        for(int grades : this.grade){
+            total += grades;
         }
+        return total / grade.size();
 
-        return sum / grade.size();
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList<Integer> getGrades() {
-        return grades;
-    }
-
-    public void setGrades(ArrayList<Integer> grades) {
-        this.grades = grades;
-    }
-
-    public ArrayList<Integer> getGrade() {
-        return grade;
-    }
-
-    public void setGrade(ArrayList<Integer> grade) {
-        this.grade = grade;
+    public ArrayList<Double> getGrades() {
+        return this.grades;
     }
 }
